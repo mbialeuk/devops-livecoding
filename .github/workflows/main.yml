@@ -19,7 +19,7 @@ jobs:
           java-version: 17
 
       - name: Build and test with Maven
-        #working-directory: simple-api
+        # working-directory: simple-api
         run: #mvn clean verify 
             mvn -B verify sonar:sonar -Dsonar.projectKey=mbialeuk_devops-livecoding -Dsonar.organization=mbialeuk -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}  --file ./simple-api/pom.xml
 
